@@ -1,0 +1,17 @@
+{
+  "name": "Patino Staff",
+  "short_name": "Patino Staff",
+  "description": "Check in for the day and see your attendance status.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
