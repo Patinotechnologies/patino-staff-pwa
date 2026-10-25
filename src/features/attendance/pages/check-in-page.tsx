@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import { Badge, type BadgeProps } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,6 +29,7 @@ function formatToday(): string {
 }
 
 export default function CheckInPage() {
+  const router = useRouter();
   const staff = useAuthStore((state) => state.staff);
   const todayQuery = useTodayCheckInQuery();
   const checkIn = useCheckInMutation();
@@ -59,7 +61,7 @@ export default function CheckInPage() {
               <Button
                 size="lg"
                 className="w-full"
-                onClick={() => checkIn.mutate()}
+                onClick={() => checkIn.mutate(undefined, { onSuccess: () => router.push("/") })}
                 isLoading={checkIn.isPending}
                 loadingText="Checking in…"
               >

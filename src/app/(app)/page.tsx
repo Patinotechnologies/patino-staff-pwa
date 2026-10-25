@@ -1,5 +1,5 @@
-import CheckInPage from "@/features/attendance/pages/check-in-page";
+import HomePage from "@/features/home/pages/home-page";
 
 export default function Page() {
-  return <CheckInPage />;
+  return <HomePage />;
 }
